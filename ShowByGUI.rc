@@ -1,0 +1,309 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\ShowByGUI.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\ShowByGUI.ico"
+IDI_ICON_structImg1     ICON    DISCARDABLE     "res\\dataStruct1.ico"
+IDI_ICON_structImg2     ICON    DISCARDABLE     "res\\dataStruct2.ico"
+IDI_ICON_leaf           ICON    DISCARDABLE     "res\\leaf.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 ShowByGUI"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,10,21,21
+    LTEXT           "ShowByGUI 1.0 版",IDC_STATIC,40,10,83,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2011",IDC_STATIC,133,9,79,12
+    DEFPUSHBUTTON   "确定",IDOK,178,34,50,14,WS_GROUP
+    LTEXT           "河北科大网络14to19小组开发",IDC_STATIC,40,27,129,14
+END
+
+IDD_SHOWBYGUI_DIALOG DIALOGEX 0, 0, 634, 305
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_VSCROLL | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "ShowByGUI"
+MENU IDR_MENU_tool
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "Tree1",IDC_TREE_choice,"SysTreeView32",TVS_HASLINES | 
+                    WS_BORDER | WS_TABSTOP,7,7,115,222
+    LTEXT           "插入位置:",IDC_STATIC_location,7,233,38,9
+    EDITTEXT        IDC_EDIT_location,45,230,39,14,ES_AUTOHSCROLL
+    LTEXT           "  插入值:",IDC_STATIC_value,7,254,37,8
+    EDITTEXT        IDC_EDIT_value,45,251,77,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "确定",IDC_BUTTON_sure,72,271,50,14
+    PUSHBUTTON      "取消",IDC_BUTTON_cancel,13,271,50,14
+    EDITTEXT        IDC_EDIT_endLocation,86,230,36,14,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_tool MENU DISCARDABLE 
+BEGIN
+    POPUP "文件"
+    BEGIN
+        MENUITEM "打开",                        ID_MENUITEM_open
+        MENUITEM "保存",                        ID_MENUITEM_save
+        MENUITEM SEPARATOR
+        MENUITEM "退出",                        ID_MENUITEM_exit
+    END
+    POPUP "操作"
+    BEGIN
+        POPUP "线性表"
+        BEGIN
+            MENUITEM "插入",                        ID_OnMenuInsertList
+            MENUITEM "修改",                        ID_OnMenuUpdatatList
+            MENUITEM "查询",                        ID_OnMenuSearchList
+            MENUITEM "删除",                        ID_OnMenuDeleteList
+        END
+        POPUP "堆栈"
+        BEGIN
+            MENUITEM "压栈",                        ID_MENUITEM32793
+            MENUITEM "弹栈",                        ID_MENUITEM32798
+        END
+        POPUP "二叉树"
+        BEGIN
+            MENUITEM "插入左孩子",                  ID_MENUITEM_insertLeftChild
+
+            MENUITEM "插入右孩子",                  ID_MENUITEM_insertRightChild
+
+            MENUITEM "删除左孩子",                  ID_MENUITEM_deleteLeftChild
+
+            MENUITEM "删除右孩子",                  ID_MENUITEM_deleteRightChild
+
+        END
+        POPUP "图"
+        BEGIN
+            MENUITEM "插入顶点",                    ID_MENUITEM_insertVex
+            MENUITEM "查询顶点",                    ID_MENUITEM_searchVex
+            MENUITEM "修改顶点",                    ID_MENUITEM_updateVex
+            MENUITEM "删除顶点",                    ID_MENUITEM_deleteVex
+            MENUITEM "插入边",                      ID_MENUITEM_insertArc
+            MENUITEM "查询边",                      ID_MENUITEM_searchArc
+            MENUITEM "设置边权值",                  ID_MENUITEM_
+            MENUITEM "修改边权值",                  ID_MENUITEM_updateWeight
+            MENUITEM "删除边",                      ID_MENUITEM_deleteArc
+        END
+        POPUP "树"
+        BEGIN
+            MENUITEM "插入",                        ID_MENUITEM32800
+            MENUITEM "删除",                        ID_MENUITEM32801
+        END
+    END
+    POPUP "帮助"
+    BEGIN
+        MENUITEM "关于",                        ID_MENUITEM_about
+    END
+END
+
+IDR_MENU_TOOLOLD MENU DISCARDABLE 
+BEGIN
+    POPUP "文件"
+    BEGIN
+        MENUITEM "打开",                        ID_MENUITEM_open
+        MENUITEM "保存",                        ID_MENUITEM_save
+        MENUITEM SEPARATOR
+        MENUITEM "退出",                        ID_MENUITEM_exit
+    END
+    POPUP "操作"
+    BEGIN
+        MENUITEM "添加",                        ID_MENUITEM_insert
+        MENUITEM "修改",                        ID_MENUITEM_update
+        MENUITEM "查询",                        ID_MENUITEM_search
+        MENUITEM "删除",                        ID_MENUITEM_delete
+        MENUITEM "插入边",                      ID_MENUITEM_insertArc
+    END
+    POPUP "帮助"
+    BEGIN
+        MENUITEM "关于",                        ID_MENUITEM_about
+    END
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "ShowByGUI Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "ShowByGUI\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2011\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "ShowByGUI.EXE\0"
+            VALUE "ProductName", "ShowByGUI 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_SHOWBYGUI_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 616
+        VERTGUIDE, 45
+        VERTGUIDE, 122
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 298
+        HORZGUIDE, 230
+        HORZGUIDE, 271
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 ShowByGUI(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\ShowByGUI.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
